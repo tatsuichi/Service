@@ -1,3 +1,6 @@
+using NLog.Extensions.Hosting;
+using NLog.Extensions.Logging;
+
 namespace WorkerService
 {
     public class Program
@@ -9,6 +12,13 @@ namespace WorkerService
                 .ConfigureServices(services =>
                 {
                     services.AddHostedService<Worker>();
+                })
+                .ConfigureLogging(loggingBuilder =>
+                {
+                    // configure Logging with NLog
+                    loggingBuilder.ClearProviders();
+                    loggingBuilder.SetMinimumLevel(LogLevel.Trace);
+                    loggingBuilder.AddNLog();
                 })
                 .Build();
 

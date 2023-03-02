@@ -1,4 +1,3 @@
-using NLog.Extensions.Hosting;
 using NLog.Extensions.Logging;
 
 namespace WorkerService

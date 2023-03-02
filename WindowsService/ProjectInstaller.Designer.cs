@@ -39,6 +39,8 @@
             // 
             // serviceInstaller1
             // 
+            this.serviceInstaller1.Description = "Windowsサービス";
+            this.serviceInstaller1.DisplayName = "WindowsService";
             this.serviceInstaller1.ServiceName = "WindowsService";
             // 
             // ProjectInstaller
